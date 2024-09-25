@@ -62,34 +62,8 @@ function createDiv(e, index) {
             const tafseerData = await response.json();
 
             tafseerData.ayahs.forEach((e) => {
-                createP(e)
+                console.log(e)
             })
-
-
-            function createP(e) {
-                let storedData = JSON.parse(localStorage.getItem('templates')) || [];
-
-                const template = `
-                 <p>Surah No. ${e.surah}</p>
-                 <p>Ayah No. ${e.ayah}</p>
-                 <p>Tafseer. ${e.text}</p>
-                 `;
-
-                storedData.push(template)
-
-                localStorage.setItem('templates', JSON.stringify(storedData))
-            }
-
-            const storedData = JSON.parse(localStorage.getItem('templates'))
-
-            if (storedData) {
-                storedData.forEach(template => {
-                    console.log(template)
-                    window.location.href = `tafseer-read.html`
-                })
-            }
-
-
         })
     }
 }
