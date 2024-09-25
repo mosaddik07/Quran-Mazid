@@ -1,0 +1,712 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Lateef:wght@200;300;400;500;600;700;800&family=Markazi+Text:wght@400..700&family=Scheherazade+New:wght@400;500;600;700&display=swap");
+:root {
+  --amiri: "Amiri", serif;
+  /* --amiri_quran: "Amiri Quran", serif; */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+.main_conteiner {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(Images/bg6.jpg);
+  background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child_conteiner {
+  width: 350px;
+  height: 400px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  text-align: center;
+  padding: 5px;
+}
+.child_conteiner h1 {
+  color: #fff;
+  font-family: monospace;
+  padding: 20px;
+  user-select: none;
+  font-size: 35px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fff;
+}
+
+.single_line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.single {
+  width: 290px;
+  height: 50px;
+  background: #fff;
+  margin-bottom: 20px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.single:hover {
+  background: wheat;
+  transform: rotate(1.1deg) translateX(10px);
+}
+.single a {
+  font-size: 20px;
+  display: inline-block;
+  margin-top: 10px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  color: #000;
+}
+
+/* idea:_____Sura Index Page Design---------- */
+.sura_conteiner {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(Images/bg3.jpg);
+  background-image: radial-gradient(
+    circle farthest-corner at 10% 20%,
+    rgb(80, 18, 133) 0%,
+    rgb(58, 48, 133) 90%
+  );
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+}
+.head_sura_conteiner h1 {
+  text-align: center;
+  color: #fff;
+  padding: 15px;
+  user-select: none;
+}
+
+.head_sura_conteiner {
+  padding: 5px;
+  margin: 10px;
+  width: 70%;
+  min-height: 100px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+}
+
+.single_sura_index {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  height: 70px;
+  background: #fff;
+  margin-top: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 8px;
+  transition: 0.5s;
+}
+
+.single_sura_index p {
+  display: inline;
+  padding: 25px;
+  font-family: "Amiri", system-ui;
+  font-size: 18px;
+}
+
+.ayah {
+  margin-left: 20%;
+}
+.single_sura_index:hover {
+  background: wheat;
+  transform: rotate(0.8deg) translateX(10px);
+}
+
+/* idea:-------------Read Quran Page--------------- */
+.read_quran_main_conteiner {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+.read_quran {
+  width: 80%;
+  min-height: 100vh;
+  background: #eee;
+  border: 10px groove #000;
+  margin: 5px;
+  padding: 20px;
+}
+.read_quran p {
+  font-size: 30px;
+  line-height: 44px;
+}
+
+.sura_text {
+  text-align: right;
+  border: 1px solid #000;
+  padding: 20px;
+  font-family: var(--amiri);
+}
+
+.sura_text::selection {
+  background: rgba(0, 128, 0, 0.582);
+}
+
+.sura_text_english {
+  text-align: left;
+  border: 1px solid #000;
+  padding: 20px;
+  color: black;
+}
+
+.font_family_change {
+  width: 100px;
+  height: 35px;
+  background: blueviolet;
+  margin: 10px;
+  position: fixed;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.font_family_change:hover {
+  background: rgb(91, 9, 168);
+}
+
+.back_to_page_btn {
+  width: 70px;
+  height: 35px;
+  background: blueviolet;
+  margin: 70px 20px;
+  position: fixed;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s;
+}
+i {
+  margin-right: 10px;
+}
+
+/* hack: Loader.... */
+
+.loader_parent_div {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader_parent_div.show {
+  display: flex;
+}
+
+.loader {
+  --background: linear-gradient(135deg, #23c4f8, #275efe);
+  --shadow: rgba(39, 94, 254, 0.28);
+  --text: #6c7486;
+  --page: rgba(255, 255, 255, 0.36);
+  --page-fold: rgba(255, 255, 255, 0.52);
+  --duration: 3s;
+  width: 200px;
+  height: 140px;
+  position: relative;
+}
+
+.loader:before,
+.loader:after {
+  --r: -6deg;
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  width: 120px;
+  top: 80%;
+  box-shadow: 0 16px 12px var(--shadow);
+  transform: rotate(var(--r));
+}
+
+.loader:before {
+  left: 4px;
+}
+
+.loader:after {
+  --r: 6deg;
+  right: 4px;
+}
+
+.loader div {
+  width: 100%;
+  height: 100%;
+  border-radius: 13px;
+  position: relative;
+  z-index: 1;
+  perspective: 600px;
+  box-shadow: 0 4px 6px var(--shadow);
+  background-image: var(--background);
+}
+
+.loader div ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+.loader div ul li {
+  --r: 180deg;
+  --o: 0;
+  --c: var(--page);
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform-origin: 100% 50%;
+  color: var(--c);
+  opacity: var(--o);
+  transform: rotateY(var(--r));
+  -webkit-animation: var(--duration) ease infinite;
+  animation: var(--duration) ease infinite;
+}
+
+.loader div ul li:nth-child(2) {
+  --c: var(--page-fold);
+  -webkit-animation-name: page-2;
+  animation-name: page-2;
+}
+
+.loader div ul li:nth-child(3) {
+  --c: var(--page-fold);
+  -webkit-animation-name: page-3;
+  animation-name: page-3;
+}
+
+.loader div ul li:nth-child(4) {
+  --c: var(--page-fold);
+  -webkit-animation-name: page-4;
+  animation-name: page-4;
+}
+
+.loader div ul li:nth-child(5) {
+  --c: var(--page-fold);
+  -webkit-animation-name: page-5;
+  animation-name: page-5;
+}
+
+.loader div ul li svg {
+  width: 90px;
+  height: 120px;
+  display: block;
+}
+
+.loader div ul li:first-child {
+  --r: 0deg;
+  --o: 1;
+}
+
+.loader div ul li:last-child {
+  --o: 1;
+}
+
+.loader span {
+  display: block;
+  left: 0;
+  right: 0;
+  top: 100%;
+  margin-top: 20px;
+  text-align: center;
+  color: var(--text);
+}
+
+@keyframes page-2 {
+  0% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  35%,
+  100% {
+    opacity: 0;
+  }
+
+  50%,
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes page-3 {
+  15% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  35% {
+    opacity: 1;
+  }
+
+  50%,
+  100% {
+    opacity: 0;
+  }
+
+  65%,
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes page-4 {
+  30% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  65%,
+  100% {
+    opacity: 0;
+  }
+
+  80%,
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes page-5 {
+  45% {
+    transform: rotateY(180deg);
+    opacity: 0;
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  80%,
+  100% {
+    opacity: 0;
+  }
+
+  95%,
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+/* idea:__________PARA INDEX FILE----------- */
+.para_index_conteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: #000428;
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  background: linear-gradient(to right, #004e92, #000428);
+
+  background-attachment: fixed;
+}
+
+.para_index_conteiner h1 {
+  color: #fff;
+  font-family: monospace;
+  padding: 5px;
+  border-bottom: 3px solid red;
+  font-size: 30px;
+}
+
+.para_index_single_div {
+  margin: 10px;
+  width: 20%;
+  height: 50px;
+  background: #fff;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.5s;
+  /* display: none; */
+}
+
+.para_index_single_div:hover {
+  background: wheat;
+  transform: rotate(1.5deg);
+}
+
+#index_numb {
+  text-align: center;
+  margin-top: 7px;
+  font-family: cursive;
+}
+
+.result_para {
+  width: 90%;
+  margin-top: 30px;
+  min-height: 350px;
+  padding: 20px;
+  font-size: 25px;
+  background: #fff;
+  border-radius: 10px;
+  display: none;
+}
+
+/* info:________ Para Index File result Text---------  */
+.ayah_div {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 5px 0; /* Space between ayahs */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.ayah_index {
+  font-weight: bold;
+  color: #fc00ff;
+  margin-bottom: 5px;
+}
+
+.ayah_text {
+  font-size: 25px;
+  line-height: 1.5;
+  text-align: right;
+  color: #000;
+  font-family: "Scheherazade New", serif;
+  padding-bottom: 10px;
+}
+
+/* idea:-----GO TO PAGE_________ */
+.container_go_to_page {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(Images/bg4.jpg);
+  background-image: linear-gradient(135deg, #288e90 10%, #130cb7 100%);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child_container_go_to_page {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  margin: 10px;
+  width: 30%;
+  min-height: 250px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  /* display: none; */
+}
+
+.child_container_go_to_page h1 {
+  text-align: center;
+  color: #fff;
+  padding: 15px;
+  user-select: none;
+  font-family: monospace;
+  border-bottom: 2px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.child_container_go_to_page input {
+  margin: 0 auto 10px auto;
+  width: 90%;
+  height: 35px;
+  display: flex;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
+  text-align: center;
+  font-family: cursive;
+}
+
+#submit_btn {
+  width: 50%;
+  height: 40px;
+  font-family: cursive;
+  text-align: center;
+  background: blueviolet;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+}
+#submit_btn:active {
+  background: rgb(131, 13, 241);
+}
+
+/* info:________Result Ayah__________-- */
+.result_text {
+  width: 60%;
+  min-height: 100px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(6, 9, 15, 0.75);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  color: #fff;
+  font-family: "Scheherazade New", serif;
+  font-size: 30px;
+  padding: 30px;
+  text-align: center;
+  line-height: 70px;
+  display: none;
+}
+
+/* idea:_______Tafseer Button___________ */
+.tafseerBtn {
+  padding: 10px;
+  margin: 3px 0;
+  background: blueviolet;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+.tafseerBtn:hover {
+  background: rgb(108, 11, 200);
+}
+
+/* idea:_________TAFSEER___________ */
+.container_tafseer {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(85.2deg, rgba(33, 3, 40, 1) 7.5%, rgba(65, 5, 72, 1) 88.7%);
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+.child_container_tafseer {
+  width: 950px;
+  height: 100%;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  text-align: center;
+  padding: 5px;
+  font-family: monospace;
+  margin-top: 20px;
+  flex-basis: 34%;
+  margin: 10px;
+}
+.child_container_tafseer h1 {
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 15px;
+}
+
+.single_tafseer_div {
+  display: flex;
+  align-items: center;
+  width: 95%;
+  min-height: 60px;
+  background: #fff;
+  margin: 10px auto;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.single_tafseer_div h2 {
+  padding: 10px;
+  font-weight: 200;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+.single_tafseer_div:hover {
+  background: wheat;
+  transform: rotate(1.1deg);
+}
+
+/* info:______Tafseer Body________ */
+.tafseer_body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to top, #135b5b 0%, #330867 100%);
+  background-size: cover;
+  background-attachment: fixed;
+  /* border-left: 3px solid green; */
+}
+
+.tafseer_body_single_div {
+  width: 98%;
+  min-height: 100vh;
+  margin: 10px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.125);
+  text-align: center;
+  padding: 5px;
+  font-family: monospace;
+}
+
+.tafseer_body_single_div h1 {
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 15px;
+}
+/* .tafseer_single_sura_div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 98%;
+  min-height: 60px;
+  background: #fff;
+  margin: 10px;
+  border-radius: 10px;
+} */
+.tafseer_single_sura_div h1 {
+  padding: 7px;
+  font-size: 18px;
+  text-align: left;
+  color: #000;
+  font-family: monospace;
+  font-size: 100;
+}
+
+/* .tafseerText {
+  border: 1px solid red;
+  padding: 10px;
+} */
